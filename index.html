@@ -94,6 +94,24 @@
         <!-- Renders dynamically -->
     </footer>
 
+    <!-- Project Details Modal -->
+    <div id="project-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="modal-close" class="modal-close-btn" title="Kapat">
+                <i data-lucide="x"></i>
+            </button>
+            <div id="modal-body">
+                <!-- Renders dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Overlay -->
+    <div id="lightbox" class="lightbox-overlay">
+        <button id="lightbox-close" class="lightbox-close-btn">&times;</button>
+        <img id="lightbox-img" src="" alt="Enlarged view">
+    </div>
+
     <!-- Scripts - Load data first, then logic -->
     <script src="data.js"></script>
     <script src="script.js"></script>

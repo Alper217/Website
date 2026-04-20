@@ -12,6 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectsGrid = document.getElementById('projects-grid');
     const documentsGrid = document.getElementById('documents-grid');
     const footer = document.getElementById('main-footer');
+    const projectModal = document.getElementById('project-modal');
+    const modalBody = document.getElementById('modal-body');
+    const modalClose = document.getElementById('modal-close');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.getElementById('lightbox-close');
 
     let currentLang = localStorage.getItem('preferred-lang') || 'tr';
 
@@ -156,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderProjects() {
         projectsGrid.innerHTML = projects.map((p, idx) => `
-            <div class="card" data-animate style="transition-delay: ${idx * 0.1}s">
+            <div class="card project-card-clickable" data-animate style="transition-delay: ${idx * 0.1}s" data-project-idx="${idx}">
                 <h3>${t(p.titleKey)}</h3>
                 <p>${t(p.descKey)}</p>
                 <div class="badge-group">
@@ -164,6 +170,64 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>
         `).join('');
+
+        // Attach click listeners
+        document.querySelectorAll('.project-card-clickable').forEach(card => {
+            card.onclick = () => {
+                const idx = card.getAttribute('data-project-idx');
+                openProjectModal(projects[idx]);
+            };
+        });
+    }
+
+    function openProjectModal(project) {
+        if (!project.longDescKey) return;
+
+        const isMobile = project.isMobile || false;
+        
+        modalBody.innerHTML = `
+            ${(!isMobile && project.images && project.images.length > 0) ? `
+                <img src="${project.images[0]}" class="modal-hero-image" alt="${t(project.titleKey)}">
+            ` : ''}
+            <div class="modal-inner-body">
+                <h2 class="modal-title">${t(project.titleKey)}</h2>
+                <div class="badge-group" style="margin-bottom: 20px">
+                    ${project.tags.map(tag => `<span class="badge">${tag}</span>`).join('')}
+                </div>
+                <div class="modal-description">
+                    ${t(project.longDescKey)}
+                </div>
+                ${project.images && project.images.length > 0 ? `
+                    <div class="modal-gallery" style="${isMobile ? 'grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));' : ''}">
+                        ${(isMobile ? project.images : project.images.slice(1)).map(img => `<img src="${img}" alt="Detail">`).join('')}
+                    </div>
+                ` : ''}
+            </div>
+        `;
+
+        projectModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        lucide.createIcons();
+
+        // Attach lightbox listeners to new images
+        modalBody.querySelectorAll('img').forEach(img => {
+            img.style.cursor = 'zoom-in';
+            img.onclick = () => openLightbox(img.src);
+        });
+    }
+
+    function openLightbox(src) {
+        lightboxImg.src = src;
+        lightbox.classList.add('active');
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+    }
+
+    function closeProjectModal() {
+        projectModal.classList.remove('active');
+        document.body.style.overflow = '';
     }
 
     function renderDocuments() {
@@ -255,6 +319,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     langBtns.forEach(btn => {
         btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+    });
+
+    modalClose.addEventListener('click', closeProjectModal);
+    projectModal.addEventListener('click', (e) => {
+        if (e.target === projectModal) closeProjectModal();
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
     });
 
     window.addEventListener('popstate', () => {

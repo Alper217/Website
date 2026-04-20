@@ -30,7 +30,7 @@ window.PORTFOLIO_DATA = {
             "exp-recontact-b2-desc": "Conducted technical analysis of FPS output and frame-time consistency to determine their impact on gameplay mechanics and player input latency.",
             "exp-recontact-b3-title": "Technical Bug Reporting",
             "exp-recontact-b3-desc": "Provided high-fidelity reports for engineering teams, including root cause analysis of system-level crashes and mechanics failures.",
-            
+
             "exp-netas-title": "Software & System Test Intern",
             "exp-netas-company": "Netaş Telekomünikasyon A.Ş.",
             "exp-netas-loc": "Istanbul, Türkiye",
@@ -41,7 +41,7 @@ window.PORTFOLIO_DATA = {
             "exp-netas-b2-desc": "Tested AI Chatbot logic and response accuracy, ensuring functional stability and high-performance backend-frontend synchronization.",
             "exp-netas-b3-title": "Mobile Resource Analysis",
             "exp-netas-b3-desc": "Profiled real-time mobile data consumption and optimized technical systems to ensure high stability in data-driven interactive modules.",
-            
+
             "exp-google-title": "Scholars Participant (Logic Engineering Focus)",
             "exp-google-company": "Google Yapay Zeka ve Teknoloji Akademisi",
             "exp-google-loc": "Istanbul, Türkiye",
@@ -52,7 +52,7 @@ window.PORTFOLIO_DATA = {
             "exp-google-b2-desc": "Applied Agile/Scrum principles to manage product lifecycles and feature prioritization in high-pressure technical environments.",
             "exp-google-b3-title": "Data-Driven MVP Iteration",
             "exp-google-b3-desc": "Analyzed system performance metrics and user feedback loops to iterate on AI-integrated MVPs, optimizing core logic for scalability and market readiness.",
-            
+
             "exp-tnc-title": "Project Management Intern",
             "exp-tnc-company": "TNC Group",
             "exp-tnc-loc": "Istanbul, Türkiye",
@@ -64,9 +64,9 @@ window.PORTFOLIO_DATA = {
 
             "projects-title": "Öne Çıkan Projeler",
             "proj-chess-title": "Project Chess",
-            "proj-chess-desc": "Unity 6000 tabanlı, hibrit taktiksel masa oyunu. Sinerji motoru ve kart tabanlı drafting sistemi içerir.",
+            "proj-chess-desc": "Unity tabanlı, taktiksel masa oyunu. Sinerji motoru ve kart tabanlı drafting sistemi içerir. <br>Detaylar için tıklayınız..",
             "proj-billio-title": "Flutter_Billio",
-            "proj-billio-desc": "Mobil abonelik ve finans takip uygulaması. Modern UI/UX prensipleriyle Flutter kullanılarak geliştirildi.",
+            "proj-billio-desc": "Mobil abonelik ve finans takip uygulaması. Modern UI/UX prensipleriyle Flutter kullanılarak geliştirildi. <br>Detaylar için tıklayınız..",
             "docs-title": "Belgeler & Arşiv",
             "docs-desc": "İncelemek istediğiniz dökumanı seçiniz.",
             "doc-cv-title": "Güncel CV",
@@ -79,6 +79,9 @@ window.PORTFOLIO_DATA = {
             "doc-drive-sub": "Tüm Dosyalar",
             "theme-dark": "Karanlık Moda Geç",
             "theme-light": "Aydınlık Moda Geç",
+            "close": "Kapat",
+            "proj-chess-long-desc": "Project Chess, stratejik derinliği ve görsel zenginliği bir araya getiren modern bir masa oyunudur. Unity 6000'in gücünden yararlanan bu projede, oyuncular benzersiz yeteneklere sahip kartları draft ederek kendi stratejilerini oluştururlar. Sinerji motoru sayesinde farklı kart kombinasyonları, oyunun gidişatını tamamen değiştirebilen güçlü etkiler yaratır. Detaylı sistem tasarımı, hem yeni başlayanlar hem de deneyimli oyuncular için dengeli ve rekabetçi bir deneyim sunar.",
+            "proj-billio-long-desc": "Flutter_Billio, modern mobil kullanıcıları için tasarlanmış kapsamlı bir abonelik ve finans takip uygulamasıdır. Flutter'ın gücünü kullanarak tek bir kod tabanıyla hem iOS hem de Android'de pürüzsüz bir deneyim sunar. Uygulama, harcama alışkanlıklarını analiz eder, yaklaşan ödemeleri hatırlatır ve kullanıcıların bütçelerini optimize etmelerine yardımcı olur. Glassmorphism ve minimal tasarım prensipleriyle hazırlanan arayüzü, finansal takibi sıkıcı bir işten keyifli bir deneyime dönüştürür.",
             "footer": "© 2026 Alper Kocasalih. Tüm hakları saklıdır."
         },
         en: {
@@ -110,7 +113,7 @@ window.PORTFOLIO_DATA = {
             "exp-recontact-b2-desc": "Conducted technical analysis of FPS output and frame-time consistency to determine their impact on gameplay mechanics and player input latency.",
             "exp-recontact-b3-title": "Technical Bug Reporting",
             "exp-recontact-b3-desc": "Provided high-fidelity reports for engineering teams, including root cause analysis of system-level crashes and mechanics failures.",
-            
+
             "exp-netas-title": "Software & System Test Intern",
             "exp-netas-company": "Netaş Telekomünikasyon A.Ş.",
             "exp-netas-loc": "Istanbul, Türkiye",
@@ -121,7 +124,7 @@ window.PORTFOLIO_DATA = {
             "exp-netas-b2-desc": "Tested AI Chatbot logic and response accuracy, ensuring functional stability and high-performance backend-frontend synchronization.",
             "exp-netas-b3-title": "Mobile Resource Analysis",
             "exp-netas-b3-desc": "Profiled real-time mobile data consumption and optimized technical systems to ensure high stability in data-driven interactive modules.",
-            
+
             "exp-google-title": "Scholars Participant (Logic Engineering Focus)",
             "exp-google-company": "Google Yapay Zeka ve Teknoloji Akademisi",
             "exp-google-loc": "Istanbul, Türkiye",
@@ -132,7 +135,7 @@ window.PORTFOLIO_DATA = {
             "exp-google-b2-desc": "Applied Agile/Scrum principles to manage product lifecycles and feature prioritization in high-pressure technical environments.",
             "exp-google-b3-title": "Data-Driven MVP Iteration",
             "exp-google-b3-desc": "Analyzed system performance metrics and user feedback loops to iterate on AI-integrated MVPs, optimizing core logic for scalability and market readiness.",
-            
+
             "exp-tnc-title": "Project Management Intern",
             "exp-tnc-company": "TNC Group",
             "exp-tnc-loc": "Istanbul, Türkiye",
@@ -144,9 +147,9 @@ window.PORTFOLIO_DATA = {
 
             "projects-title": "Featured Projects",
             "proj-chess-title": "Project Chess",
-            "proj-chess-desc": "Unity 6000 based hybrid tactical board game. Includes synergy engine and card-based drafting system.",
+            "proj-chess-desc": "Unity 6000 based hybrid tactical board game. Includes synergy engine and card-based drafting system. <br>Click for details..",
             "proj-billio-title": "Flutter_Billio",
-            "proj-billio-desc": "Mobile subscription and finance tracking app. Developed using Flutter with modern UI/UX principles.",
+            "proj-billio-desc": "Mobile subscription and finance tracking app. Developed using Flutter with modern UI/UX principles. <br>Click for details..",
             "docs-title": "Documents & Archive",
             "docs-desc": "Select the document you wish to review.",
             "doc-cv-title": "Current CV",
@@ -159,6 +162,9 @@ window.PORTFOLIO_DATA = {
             "doc-drive-sub": "All Files",
             "theme-dark": "Switch to Dark Mode",
             "theme-light": "Switch to Light Mode",
+            "close": "Close",
+            "proj-chess-long-desc": "Project Chess is a modern board game that combines strategic depth with visual richness. Leveraging the power of Unity 6000, players draft cards with unique abilities to build their own strategies. Thanks to the synergy engine, different card combinations create powerful effects that can completely change the course of the game. Detailed system design offers a balanced and competitive experience for both beginners and experienced players.",
+            "proj-billio-long-desc": "Flutter_Billio is a comprehensive subscription and finance tracking app designed for modern mobile users. Using the power of Flutter, it offers a seamless experience on both iOS and Android with a single codebase. The app analyzes spending habits, reminds of upcoming payments, and helps users optimize their budgets. Prepared with glassmorphism and minimal design principles, the interface transforms financial tracking from a tedious task into an enjoyable experience.",
             "footer": "© 2026 Alper Kocasalih. All rights reserved."
         },
         es: {
@@ -190,7 +196,7 @@ window.PORTFOLIO_DATA = {
             "exp-recontact-b2-desc": "Conducted technical analysis of FPS output and frame-time consistency to determine their impact on gameplay mechanics and player input latency.",
             "exp-recontact-b3-title": "Technical Bug Reporting",
             "exp-recontact-b3-desc": "Provided high-fidelity reports for engineering teams, including root cause analysis of system-level crashes and mechanics failures.",
-            
+
             "exp-netas-title": "Software & System Test Intern",
             "exp-netas-company": "Netaş Telekomünikasyon A.Ş.",
             "exp-netas-loc": "Istanbul, Türkiye",
@@ -201,7 +207,7 @@ window.PORTFOLIO_DATA = {
             "exp-netas-b2-desc": "Tested AI Chatbot logic and response accuracy, ensuring functional stability and high-performance backend-frontend synchronization.",
             "exp-netas-b3-title": "Mobile Resource Analysis",
             "exp-netas-b3-desc": "Profiled real-time mobile data consumption and optimized technical systems to ensure high stability in data-driven interactive modules.",
-            
+
             "exp-google-title": "Scholars Participant (Logic Engineering Focus)",
             "exp-google-company": "Google Yapay Zeka ve Teknoloji Akademisi",
             "exp-google-loc": "Istanbul, Türkiye",
@@ -212,7 +218,7 @@ window.PORTFOLIO_DATA = {
             "exp-google-b2-desc": "Applied Agile/Scrum principles to manage product lifecycles and feature prioritization in high-pressure technical environments.",
             "exp-google-b3-title": "Data-Driven MVP Iteration",
             "exp-google-b3-desc": "Analyzed system performance metrics and user feedback loops to iterate on AI-integrated MVPs, optimizing core logic for scalability and market readiness.",
-            
+
             "exp-tnc-title": "Project Management Intern",
             "exp-tnc-company": "TNC Group",
             "exp-tnc-loc": "Istanbul, Türkiye",
@@ -224,9 +230,9 @@ window.PORTFOLIO_DATA = {
 
             "projects-title": "Proyectos Destacados",
             "proj-chess-title": "Project Chess",
-            "proj-chess-desc": "Juego de mesa táctico híbrido basado en Unity 6000. Incluye motor de sinergia ve sistema de drafting basado en cartas.",
+            "proj-chess-desc": "Juego de mesa táctico híbrido basado en Unity 6000. Incluye motor de sinergia y sistema de drafting basado en cartas. <br>Haga clic para más detalles..",
             "proj-billio-title": "Flutter_Billio",
-            "proj-billio-desc": "Aplicación móvil de suscripción ve seguimiento financiero. Desarrollada con Flutter siguiendo principios modernos de UI/UX.",
+            "proj-billio-desc": "Aplicación móvil de suscripción y seguimiento financiero. Desarrollada con Flutter siguiendo principios modernos de UI/UX. <br>Haga clic para más detalles..",
             "docs-title": "Documentos y Archivos",
             "docs-desc": "Seleccione el documento que desea revisar.",
             "doc-cv-title": "CV Actual",
@@ -239,6 +245,9 @@ window.PORTFOLIO_DATA = {
             "doc-drive-sub": "Todos los Archivos",
             "theme-dark": "Cambiar a Modo Oscuro",
             "theme-light": "Cambiar a Modo Claro",
+            "close": "Cerrar",
+            "proj-chess-long-desc": "Project Chess es un juego de mesa moderno que combina profundidad estratégica con riqueza visual. Aprovechando el poder de Unity 6000, los jugadores seleccionan cartas con habilidades únicas para construir sus propias estrategias. Gracias al motor de sinergia, diferentes combinaciones de cartas crean efectos poterosos que pueden cambiar completamente el curso del juego. El diseño detallado del sistema ofrece una experiencia equilibrada y competitiva tanto para principiantes como para jugadores experimentados.",
+            "proj-billio-long-desc": "Flutter_Billio es una aplicación integral de seguimiento de suscripciones y finanzas diseñada para usuarios móviles modernos. Utilizando el poder de Flutter, ofrece una experiencia fluida tanto en iOS como en Android con una sola base de código. La aplicación analiza los hábitos de gasto, recuerda los próximos pagos y ayuda a los usuarios a optimizar sus presupuestos. Preparada con glassmorphism y principios de diseño minimalista, la interfaz transforma el seguimiento financiero de una tarea tediosa en una experiencia agradable.",
             "footer": "© 2026 Alper Kocasalih. Todos los derechos reservados."
         }
     },
@@ -247,12 +256,22 @@ window.PORTFOLIO_DATA = {
         {
             titleKey: "proj-chess-title",
             descKey: "proj-chess-desc",
+            longDescKey: "proj-chess-long-desc",
+            images: [
+                "images/Pawns2.png",
+                "images/Pawns.png",
+                "images/InGameSS.png",
+                "images/Cards.png"
+            ],
             tags: ["C#", "Unity 6000", "System Design"],
             link: "#"
         },
         {
             titleKey: "proj-billio-title",
             descKey: "proj-billio-desc",
+            longDescKey: "proj-billio-long-desc",
+            isMobile: true,
+            images: ["images/billio-1.png", "images/billio-2.png"],
             tags: ["Flutter", "Dart", "Mobile Dev"],
             link: "#"
         }
