@@ -6,12 +6,12 @@
     --primary-dark: #3730a3;
     --secondary: #0ea5e9;
     /* Sky Blue */
-    --accent: #8b5cf6;
+    --accent: #7c44ff;
     --background: #f1f5f9;
     /* Slate 100 - Warmer/deeper than Slate 50 */
     --text-main: #0f172a;
     /* Deep Navy */
-    --text-muted: #475569;
+    --text-muted: #627691;
     /* Slate 600 */
     --bg-alt: #cbd5e1;
     /* Slate 300 - Much more visible transition */
@@ -19,28 +19,53 @@
     --glass: rgba(255, 255, 255, 0.85);
     --border: rgba(15, 23, 42, 0.08);
     --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    --badge-bg: rgba(79, 70, 229, 0.08);
     --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-fast: all 0.2s ease;
 }
 
 
 [data-theme="dark"] {
+    --primary: #7c44ff;
+    /* Lighter Indigo for Dark Mode visibility */
     --background: #243652;
     /* Slate 800 - Lighter and more professional navy */
     --text-main: #f8fafc;
-    --text-muted: #94a3b8;
+    --text-muted: #bebfc2;
     --bg-alt: #16223f;
     /* Darker sections for depth */
-    --white: #28374e;
+    --white: #41536b;
     --glass: rgba(30, 41, 59, 0.8);
     --border: rgba(255, 255, 255, 0.06);
     --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+    --badge-bg: rgba(255, 255, 255, 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 10px;
+    border: 3px solid var(--background);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
 }
 
 body {
@@ -368,7 +393,9 @@ section.active {
 }
 
 .card {
-    background: var(--white);
+    background: linear-gradient(160deg, var(--white) 0%, var(--background) 100%);
+    opacity: 0.98;
+    backdrop-filter: blur(10px);
     padding: 30px;
     border-radius: 24px;
     border: 1px solid var(--border);
@@ -403,7 +430,7 @@ section.active {
 .badge {
     padding: 4px 12px;
     border-radius: 6px;
-    background: rgba(79, 70, 229, 0.08);
+    background: var(--badge-bg);
     color: var(--primary);
     font-size: 0.75rem;
     font-weight: 600;

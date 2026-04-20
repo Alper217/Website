@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (descEl) descEl.textContent = t('docs-desc');
 
         documentsGrid.innerHTML = documents.map((doc, idx) => `
-            <a href="${doc.link}" class="file-card" data-animate style="transition-delay: ${idx * 0.05}s">
+            <a href="${doc.link}" target="_blank" rel="noopener noreferrer" class="file-card" data-animate style="transition-delay: ${idx * 0.05}s">
                 <div class="file-icon"><i data-lucide="${doc.icon}"></i></div>
                 <div>
                     <h4 style="margin:0">${t(doc.titleKey)}</h4>
