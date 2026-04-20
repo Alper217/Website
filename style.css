@@ -1,33 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800&display=swap');
 
 :root {
-    --primary: #6366f1;
-    /* Purple */
-    --primary-dark: #4f46e5;
-    --secondary: #3b82f6;
-    /* Blue */
+    --primary: #4f46e5;
+    /* Deep Indigo */
+    --primary-dark: #3730a3;
+    --secondary: #0ea5e9;
+    /* Sky Blue */
     --accent: #8b5cf6;
-    --background: #ffffff;
-    --text-main: #1e293b;
-    --text-muted: #64748b;
-    --bg-alt: #f8fafc;
+    --background: #f1f5f9;
+    /* Slate 100 - Warmer/deeper than Slate 50 */
+    --text-main: #0f172a;
+    /* Deep Navy */
+    --text-muted: #475569;
+    /* Slate 600 */
+    --bg-alt: #cbd5e1;
+    /* Slate 300 - Much more visible transition */
     --white: #ffffff;
-    --glass: rgba(255, 255, 255, 0.7);
-    --border: rgba(226, 232, 240, 0.8);
-    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --glass: rgba(255, 255, 255, 0.85);
+    --border: rgba(15, 23, 42, 0.08);
+    --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
     --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-fast: all 0.2s ease;
 }
 
+
 [data-theme="dark"] {
-    --background: #0f172a;
-    --text-main: #f1f5f9;
+    --background: #243652;
+    /* Slate 800 - Lighter and more professional navy */
+    --text-main: #f8fafc;
     --text-muted: #94a3b8;
-    --bg-alt: #1e293b;
-    --white: #1e293b;
-    --glass: rgba(15, 23, 42, 0.8);
-    --border: rgba(51, 65, 85, 0.8);
-    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+    --bg-alt: #16223f;
+    /* Darker sections for depth */
+    --white: #28374e;
+    --glass: rgba(30, 41, 59, 0.8);
+    --border: rgba(255, 255, 255, 0.06);
+    --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -39,7 +46,8 @@
 body {
     font-family: 'Inter', sans-serif;
     color: var(--text-main);
-    background-color: var(--bg-alt);
+    background: linear-gradient(135deg, var(--background) 0%, var(--bg-alt) 100%);
+    background-attachment: fixed;
     line-height: 1.6;
     overflow-x: hidden;
     display: flex;
@@ -58,20 +66,52 @@ h3 {
     position: fixed;
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(59, 130, 246, 0.05) 100%);
-    filter: blur(80px);
+    background: radial-gradient(circle, rgba(79, 70, 229, 0.12) 0%, rgba(14, 165, 233, 0.04) 100%);
+    filter: blur(100px);
     z-index: -1;
     border-radius: 50%;
+    animation: float 20s infinite ease-in-out;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
 }
 
 .blob-1 {
-    top: -100px;
-    right: -100px;
+    top: -50px;
+    right: -50px;
+    background: radial-gradient(circle, rgba(79, 70, 229, 0.15) 0%, transparent 70%);
 }
 
 .blob-2 {
-    bottom: -100px;
-    left: -100px;
+    bottom: -50px;
+    left: -50px;
+    background: radial-gradient(circle, rgba(14, 165, 233, 0.12) 0%, transparent 70%);
+    animation-delay: -5s;
+}
+
+.blob-3 {
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.05) 0%, transparent 70%);
+    filter: blur(120px);
+    opacity: 0.6;
+    animation-delay: -10s;
 }
 
 /* Navigation */
@@ -104,7 +144,7 @@ nav a {
 nav a:hover,
 nav a.active {
     color: var(--primary);
-    background: rgba(99, 102, 241, 0.1);
+    background: rgba(79, 70, 229, 0.08);
 }
 
 /* Controls Container (Top Right) */
@@ -173,7 +213,7 @@ nav a.active {
     transform: rotate(45deg) scale(1.1);
     border-color: var(--primary);
     color: var(--primary);
-    background: rgba(99, 102, 241, 0.1);
+    background: rgba(79, 70, 229, 0.08);
 }
 
 /* Animations */
@@ -279,7 +319,7 @@ section.active {
     transform: translateY(-8px) scale(1.05);
     border-color: var(--primary);
     color: var(--primary);
-    box-shadow: 0 15px 30px -10px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 15px 30px -10px rgba(79, 70, 229, 0.2);
 }
 
 .social-btn.github:hover {
@@ -298,7 +338,7 @@ section.active {
 [data-theme="dark"] .social-btn.github:hover {
     border-color: var(--primary);
     color: var(--primary);
-    background: rgba(99, 102, 241, 0.1);
+    background: rgba(79, 70, 229, 0.08);
 }
 
 [data-theme="dark"] .social-btn.linkedin:hover {
@@ -363,7 +403,7 @@ section.active {
 .badge {
     padding: 4px 12px;
     border-radius: 6px;
-    background: rgba(99, 102, 241, 0.1);
+    background: rgba(79, 70, 229, 0.08);
     color: var(--primary);
     font-size: 0.75rem;
     font-weight: 600;
@@ -387,7 +427,8 @@ section.active {
 
 #experience .underline {
     width: 100%;
-    max-width: 100px; /* Center it like others but maybe a bit wider */
+    max-width: 100px;
+    /* Center it like others but maybe a bit wider */
     height: 4px;
     background: var(--primary);
     margin: 0 auto;
@@ -504,7 +545,7 @@ section.active {
 .file-icon {
     width: 48px;
     height: 48px;
-    background: rgba(59, 130, 246, 0.1);
+    background: rgba(14, 165, 233, 0.1);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -518,7 +559,7 @@ footer {
     text-align: center;
     color: var(--text-muted);
     font-size: 0.85rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 1px solid var(--border);
     margin-top: auto;
 }
 
@@ -659,7 +700,7 @@ footer p {
 
 .modal-gallery img:hover {
     transform: translateY(-5px) scale(1.01);
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+    box-shadow: 0 20px 40px rgba(79, 70, 229, 0.15);
     border-color: var(--primary);
 }
 
@@ -724,9 +765,11 @@ footer p {
     .modal-inner-body {
         padding: 25px;
     }
+
     .modal-hero-image {
         height: 200px;
     }
+
     .modal-title {
         font-size: 1.6rem;
     }
