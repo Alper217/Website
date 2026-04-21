@@ -20,14 +20,15 @@
     --border: rgba(15, 23, 42, 0.08);
     --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
     --badge-bg: rgba(79, 70, 229, 0.08);
+    --badge-text: #4f46e5;
     --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-fast: all 0.2s ease;
 }
 
 
 [data-theme="dark"] {
-    --primary: #7c44ff;
-    /* Lighter Indigo for Dark Mode visibility */
+    --primary: #a78bfa;
+    /* More vibrant purple for better contrast */
     --background: #243652;
     /* Slate 800 - Lighter and more professional navy */
     --text-main: #f8fafc;
@@ -38,7 +39,8 @@
     --glass: rgba(30, 41, 59, 0.8);
     --border: rgba(255, 255, 255, 0.06);
     --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
-    --badge-bg: rgba(255, 255, 255, 0.1);
+    --badge-bg: rgba(124, 68, 255, 0.15);
+    --badge-text: #c7d2fe; /* Light Indigo for better contrast */
 }
 
 /* Custom Scrollbar */
@@ -111,6 +113,28 @@ h3 {
 
     66% {
         transform: translate(-20px, 20px) scale(0.9);
+    }
+}
+
+.status-pulse {
+    animation: statusPulse 2s infinite;
+    box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.4);
+}
+
+@keyframes statusPulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.4);
+    }
+
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(79, 70, 229, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(79, 70, 229, 0);
     }
 }
 
@@ -428,12 +452,20 @@ section.active {
 }
 
 .badge {
-    padding: 4px 12px;
-    border-radius: 6px;
+    padding: 6px 14px;
+    border-radius: 8px;
     background: var(--badge-bg);
-    color: var(--primary);
-    font-size: 0.75rem;
+    color: var(--badge-text);
+    font-size: 0.8rem;
     font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition-fast);
+}
+
+.badge:hover {
+    background: var(--badge-text);
+    color: var(--background);
+    transform: translateY(-2px);
 }
 
 /* Specific Section Styles */
@@ -547,6 +579,67 @@ section.active {
 .exp-bullets li strong {
     font-weight: 700;
     color: var(--primary);
+}
+
+/* Profile Section (Integrated Style) */
+.profile-container {
+    max-width: 800px;
+    margin: 40px auto 0;
+}
+
+.profile-item {
+    margin-bottom: 40px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border);
+}
+
+.profile-item:last-child {
+    border-bottom: none;
+}
+
+.profile-item-category {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.profile-item-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 20px;
+}
+
+.profile-item-meta {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.profile-item-main {
+    font-size: 1.5rem;
+    color: var(--text-main);
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.profile-item-sub {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--text-muted);
+    margin-top: 5px;
+    display: block;
+}
+
+.profile-item-description {
+    font-size: 1rem;
+    color: var(--text-main);
+    line-height: 1.6;
+    opacity: 0.9;
 }
 
 /* Drive Section (Belgeler) */

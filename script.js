@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h1 class="fade-in">${t('hero-title')}</h1>
             <p class="fade-in" style="animation-delay: 0.1s">${t('hero-subtitle')}</p>
             <div class="badge-group fade-in" style="justify-content: center; margin-bottom: 2rem; animation-delay: 0.2s">
-                <span class="badge" style="background: var(--primary); color: white; padding: 6px 16px;">${t('hero-status')}</span>
+                <span class="badge status-pulse" style="background: var(--primary); color: white; padding: 6px 16px;">${t('hero-status')}</span>
             </div>
             <p class="fade-in" style="font-size: 1.1rem; max-width: 700px; margin: 0 auto 3rem; animation-delay: 0.3s">
                 ${t('hero-desc')}
@@ -108,30 +108,62 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderProfile() {
         profileGrid.innerHTML = `
-            <div class="card" data-animate>
-                <div style="display:flex; align-items:center; gap:15px; margin-bottom:15px;">
-                    <i data-lucide="graduation-cap" style="color:var(--primary)"></i>
-                    <h3 style="margin:0">${t('profile-edu')}</h3>
+            <div class="profile-info-container">
+                <!-- Status (EU Citizenship) - HIGHLIGHTED -->
+                <div class="profile-item" data-animate>
+                    <div class="profile-item-header">
+                        <span class="profile-item-category" style="color: var(--secondary)">${t('profile-status')}</span>
+                        <div class="profile-item-title-row">
+                            <h3 class="profile-item-main" style="display: flex; align-items: center; gap: 10px;">
+                                <img src="https://flagcdn.com/w40/eu.png" alt="EU Flag" style="height: 20px; border-radius: 2px;">
+                                ${t('profile-status-eu')}
+                            </h3>
+                        </div>
+                    </div>
                 </div>
-                <p><strong>${t('profile-uni')}</strong></p>
-                <p>${t('profile-dept')}</p>
-                <p style="font-size: 0.85rem; margin-top:5px; color: var(--text-muted)">${t('profile-date')}</p>
-            </div>
-            <div class="card" data-animate>
-                <div style="display:flex; align-items:center; gap:15px; margin-bottom:15px;">
-                    <i data-lucide="code-2" style="color:var(--secondary)"></i>
-                    <h3 style="margin:0">${t('profile-skills')}</h3>
+
+                <!-- Education Item -->
+                <div class="profile-item" data-animate>
+                    <div class="profile-item-header">
+                        <div class="profile-item-title-row">
+                            <span class="profile-item-category">${t('profile-edu')}</span>
+                            <span class="profile-item-meta">${t('profile-date')}</span>
+                        </div>
+                        <div class="profile-item-content-row">
+                            <h3 class="profile-item-main">${t('profile-uni')}</h3>
+                            <span class="profile-item-sub">${t('profile-dept')}</span>
+                        </div>
+                        <ul class="exp-bullets" style="margin-top: 15px;">
+                            <li>${t('profile-edu-b1')}</li>
+                            <li>${t('profile-edu-b2')}</li>
+                            <li>${t('profile-edu-b3')}</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="badge-group">
-                    ${skills.map(s => `<span class="badge">${s}</span>`).join('')}
+
+                <!-- Skills Item -->
+                <div class="profile-item" data-animate>
+                    <div class="profile-item-header">
+                        <span class="profile-item-category">${t('profile-skills')}</span>
+                    </div>
+                    <div class="badge-group" style="margin-top: 15px;">
+                        ${skills.map(s => `<span class="badge">${s}</span>`).join('')}
+                    </div>
                 </div>
-            </div>
-            <div class="card" data-animate>
-                <div style="display:flex; align-items:center; gap:15px; margin-bottom:15px;">
-                    <i data-lucide="settings" style="color:var(--accent)"></i>
-                    <h3 style="margin:0">${t('profile-tech')}</h3>
+
+                <!-- Tech Info Item -->
+                <div class="profile-item" data-animate>
+                    <div class="profile-item-header">
+                        <span class="profile-item-category">${t('profile-tech')}</span>
+                    </div>
+                    <ul class="exp-bullets" style="margin-top: 10px;">
+                        <li>${t('profile-tech-prog')}</li>
+                        <li>${t('profile-tech-tools')}</li>
+                        <li>${t('profile-tech-method')}</li>
+                        <li>${t('profile-tech-core')}</li>
+                        <li>${t('profile-tech-soft')}</li>
+                    </ul>
                 </div>
-                <p>${t('profile-tech-desc')}</p>
             </div>
         `;
     }
@@ -163,7 +195,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderProjects() {
         projectsGrid.innerHTML = projects.map((p, idx) => `
             <div class="card project-card-clickable" data-animate style="transition-delay: ${idx * 0.1}s" data-project-idx="${idx}">
-                <h3>${t(p.titleKey)}</h3>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 10px;">
+                    <h3>${t(p.titleKey)}</h3>
+                    ${p.status === 'wip' ? `<span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border-color: rgba(245, 158, 11, 0.2); font-size: 0.65rem;">${t('proj-status-wip')}</span>` : ''}
+                </div>
                 <p>${t(p.descKey)}</p>
                 <div class="badge-group">
                     ${p.tags.map(tag => `<span class="badge">${tag}</span>`).join('')}
@@ -190,7 +225,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 <img src="${project.images[0]}" class="modal-hero-image" alt="${t(project.titleKey)}">
             ` : ''}
             <div class="modal-inner-body">
-                <h2 class="modal-title">${t(project.titleKey)}</h2>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                    <h2 class="modal-title" style="margin:0">${t(project.titleKey)}</h2>
+                    ${project.status === 'wip' ? `<span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border-color: rgba(245, 158, 11, 0.2);">${t('proj-status-wip')}</span>` : ''}
+                </div>
                 <div class="badge-group" style="margin-bottom: 20px">
                     ${project.tags.map(tag => `<span class="badge">${tag}</span>`).join('')}
                 </div>
