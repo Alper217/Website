@@ -91,7 +91,7 @@ window.PORTFOLIO_DATA = {
             "theme-light": "Aydınlık Moda Geç",
             "close": "Kapat",
             "proj-chess-long-desc": "Project Chess, stratejik derinliği ve görsel zenginliği bir araya getiren modern bir masa oyunudur. Unity 6000'in gücünden yararlanan bu projede, oyuncular benzersiz yeteneklere sahip kartları draft ederek kendi stratejilerini oluştururlar. Sinerji motoru sayesinde farklı kart kombinasyonları, oyunun gidişatını tamamen değiştirebilen güçlü etkiler yaratır. Detaylı sistem tasarımı, hem yeni başlayanlar hem de deneyimli oyuncular için dengeli ve rekabetçi bir deneyim sunar.",
-            "proj-billio-long-desc": "Billio, modern mobil kullanıcıları için tasarlanmış kapsamlı bir abonelik ve finans takip uygulamasıdır. Flutter'ın gücünü kullanarak tek bir kod tabanıyla hem iOS hem de Android'de pürüzsüz bir deneyim sunar. Uygulama, harcama alışkanlıklarını analiz eder, yaklaşan ödemeleri hatırlatır ve kullanıcıların bütçelerini optimize etmelerine yardımcı olur. Glassmorphism ve minimal tasarım prensipleriyle hazırlanan arayüzü, finansal takibi sıkıcı bir işten keyifli bir deneyime dönüştürür.",
+            "proj-billio-long-desc": "Billio, modern mobil kullanıcıları için tasarlanmış kapsamlı bir abonelik ve finans takip uygulamasıdır. Flutter'ın gücüyle geliştirilen uygulama; yapay zeka destekli harcama analizi, detaylı grafiksel raporlar, fatura yönetimi ve 'Neler Alabilirdin?' gibi karşılaştırmalı tasarruf modülleri sunar. Glassmorphism tasarımıyla finansal yönetimi teknik bir zorunluluktan keyifli bir deneyime dönüştürür.",
             "footer": "© 2026 Alper Kocasalih. Tüm hakları saklıdır.",
             "proj-status-wip": "Aktif Olarak Devam Ediyor 🔨"
         },
@@ -185,7 +185,7 @@ window.PORTFOLIO_DATA = {
             "theme-light": "Switch to Light Mode",
             "close": "Close",
             "proj-chess-long-desc": "Project Chess is a modern board game that combines strategic depth with visual richness. Leveraging the power of Unity 6000, players draft cards with unique abilities to build their own strategies. Thanks to the synergy engine, different card combinations create powerful effects that can completely change the course of the game. Detailed system design offers a balanced and competitive experience for both beginners and experienced players.",
-            "proj-billio-long-desc": "Billio is a comprehensive subscription and finance tracking app designed for modern mobile users. Using the power of Flutter, it offers a seamless experience on both iOS and Android with a single codebase. The app analyzes spending habits, reminds of upcoming payments, and helps users optimize their budgets. Prepared with glassmorphism and minimal design principles, the interface transforms financial tracking from a tedious task into an enjoyable experience.",
+            "proj-billio-long-desc": "Billio is a comprehensive subscription and finance tracking app designed for modern mobile users. Developed with Flutter, it features AI-powered spending analysis, detailed graphical reporting, invoice management, and comparative saving modules like 'What Could You Have Bought?'. Its glassmorphism interface transforms financial management from a chore into a premium visual experience.",
             "footer": "© 2026 Alper Kocasalih. All rights reserved.",
             "proj-status-wip": "Work in Progress 🔨"
         },
@@ -279,7 +279,7 @@ window.PORTFOLIO_DATA = {
             "theme-light": "Cambiar a Modo Claro",
             "close": "Cerrar",
             "proj-chess-long-desc": "Project Chess es un juego de mesa moderno que combina profundidad estratégica con riqueza visual. Aprovechando el poder de Unity 6000, los jugadores seleccionan cartas con habilidades únicas para construir sus propias estrategias. Gracias al motor de sinergia, diferentes combinaciones de cartas crean efectos poterosos que pueden cambiar completamente el curso del juego. El diseño detallado del sistema ofrece una experiencia equilibrada y competitiva tanto para principiantes como para jugadores experimentados.",
-            "proj-billio-long-desc": "Billio es una aplicación integral de seguimiento de suscripciones y finanzas diseñada para usuarios móviles modernos. Utilizando el poder de Flutter, ofrece una experiencia fluida tanto en iOS como en Android con una sola base de código. La aplicación analiza los hábitos de gasto, recuerda los próximos pagos y ayuda a los usuarios a optimizar sus presupuestos. Preparada con glassmorphism y principios de diseño minimalista, la interfaz transforma el seguimiento financiero de una tarea tediosa en una experiencia agradable.",
+            "proj-billio-long-desc": "Billio es una aplicación integral de seguimiento de suscripciones y finanzas diseñada para usuarios móviles modernos. Desarrollada con Flutter, cuenta con análisis de gastos impulsado por IA, informes gráficos detallados, gestión de facturas y módulos de ahorro comparativo como '¿Qué podrías haber comprado?'. Su interfaz de glassmorphism transforma la gestión financiera de una tarea común en una experiencia visual premium.",
             "footer": "© 2026 Alper Kocasalih. Todos los derechos reservados.",
             "proj-status-wip": "En Desarrollo 🔨"
         }
@@ -305,8 +305,13 @@ window.PORTFOLIO_DATA = {
             descKey: "proj-billio-desc",
             longDescKey: "proj-billio-long-desc",
             isMobile: true,
-            images: ["images/billio-1.png", "images/billio-2.png"],
-            tags: ["Flutter", "Dart", "Mobile Dev"],
+            images: [
+                "images/AppImage1.png",
+                "images/AppImage2.png",
+                "images/AppImage3.png",
+                "images/AppImage4.png"
+            ],
+            tags: ["Flutter", "Dart", "AI Analysis", "Fintech"],
             status: "wip",
             link: "#"
         }
